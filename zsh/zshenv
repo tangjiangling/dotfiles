@@ -1,0 +1,22 @@
+# XDG paths
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+[ -d "$XDG_CONFIG_HOME" ] || mkdir -p "$XDG_CONFIG_HOME"
+[ -d "$XDG_CACHE_HOME" ] || mkdir -p "$XDG_CACHE_HOME"
+[ -d "$XDG_DATA_HOME" ] || mkdir -p "$XDG_DATA_HOME"
+
+# common variables
+export NULLCMD=bat
+export EDITOR=vim
+export VISUAL=vim
+
+# dotfiles dir
+export DOTFILES="$HOME/dotfiles"
+
+# zsh plugin manager zinit
+export ZINIT_HOME="$XDG_DATA_HOME/zinit/zinit.git"
+
+# java home
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
