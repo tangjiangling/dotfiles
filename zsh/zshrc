@@ -62,10 +62,10 @@ zle -N zle-line-init
 echo -ne '\e[5 q'                                                             # use beam shape cursor on startup
 preexec() { echo -ne '\e[5 q' ;}                                              # use beam shape cursor for each new prompt
 
-bindkey -M menuselect '^k' vi-up-line-or-history                              # select the top element in the menu
-bindkey -M menuselect '^j' vi-down-line-or-history                            # select the bottom element in the menu
-bindkey -M menuselect '^h' vi-backward-char                                   # select the left element in the menu
-bindkey -M menuselect '^l' vi-forward-char                                    # select the right element in the menu
+bindkey -M menuselect '^K' vi-up-line-or-history                              # select the top element in the menu
+bindkey -M menuselect '^J' vi-down-line-or-history                            # select the bottom element in the menu
+bindkey -M menuselect '^H' vi-backward-char                                   # select the left element in the menu
+bindkey -M menuselect '^L' vi-forward-char                                    # select the right element in the menu
 
 autoload -z edit-command-line
 zle -N edit-command-line
