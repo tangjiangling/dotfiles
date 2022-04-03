@@ -1,4 +1,11 @@
 ###############################################################################
+# Auto-load customized functions                                              #
+###############################################################################
+if [[ -d $DOTFILES/zsh/functions ]]; then
+    for func in $DOTFILES/zsh/functions/*(:t); autoload -U $func
+fi
+
+###############################################################################
 # Completion                                                                  #
 ###############################################################################
 setopt ALWAYS_TO_END                                                          # the cursor is moved to the end of the word if a completion is performed with the cursor within a word

@@ -15,6 +15,12 @@ export VISUAL=vim
 # dotfiles dir
 export DOTFILES="$HOME/dotfiles"
 
+# customize fpath
+fpath=(
+    $DOTFILES/zsh/functions
+    $fpath
+)
+
 # zsh plugin manager zinit
 export ZINIT_HOME="$XDG_DATA_HOME/zinit/zinit.git"
 
