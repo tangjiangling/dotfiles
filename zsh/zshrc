@@ -81,8 +81,8 @@ bindkey -M viins "^A" vi-beginning-of-line                                    # 
 bindkey -M viins "^E" vi-end-of-line                                          # [Ctrl-e]    - move to end of line
 bindkey -M viins "^W" backward-delete-word                                    # [Ctrl-w]    - delete word behind cursor
 bindkey -M viins "^U" backward-kill-line                                      # [Ctrl-u]    - delete line behind cursor
-bindkey -M viins "^D" backward-delete-char                                    # [Ctrl-d]    - delete backward
-bindkey "^?" backward-delete-char                                             # [Backspace] - delete backward
+bindkey -M viins "^D" delete-char                                             # [Ctrl-d]    - delete the character under the cursor
+bindkey "^?" backward-delete-char                                             # [Backspace] - delete the character behind the cursor
 
 autoload -Uz up-line-or-beginning-search
 zle -N up-line-or-beginning-search
