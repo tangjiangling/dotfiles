@@ -1,0 +1,199 @@
+" Basics {{{
+filetype plugin indent on                                                      " add filetype, plugin, and indent support
+syntax on                                                                      " turn on syntax highlighting
+runtime! macros/matchit.vim                                                    " `matchit.vim` is built-in so let's enable it! (hit `%` on `if` to jump to `else`)
+
+" Cursor settings
+" 0, 1 or none    blinking block cursor
+" 2               block cursor
+" 3               blinking underline cursor
+" 4               underline cursor
+" 5               blinking vertical bar cursor
+" 6               vertical bar cursor
+let &t_ti.="\e[1 q"                                                            " put terminal into 'termcap' mode
+let &t_te.="\e[1 q"                                                            " end of 'termcap' mode
+let &t_SI.="\e[5 q"                                                            " start insert mode (blinking vertical bar cursor)
+let &t_SR.="\e[4 q"                                                            " start replace mode (underline cursor)
+let &t_EI.="\e[1 q"                                                            " end insert or replace mode (blinking block cursor)
+" }}}
+
+" Settings {{{
+set nocompatible                                                               " don't behave very Vi compatible
+set path=.,**                                                                  " relative to current file and everything under :pwd
+set incsearch                                                                  " show match for partly typed search command
+set smartcase                                                                  " override 'ignorecase' when pattern has upper case characters
+set scrolloff=8                                                                " number of screen lines to show around the cursor
+set nowrap                                                                     " don't long lines wrap
+set number                                                                     " show the line number for each line
+set relativenumber                                                             " show the relative line number for each line
+set hlsearch                                                                   " highlight all matches for the last used search pattern
+set termguicolors                                                              " use GUI colors for the terminal
+set cursorline                                                                 " highlight the screen line of the cursor
+set hidden                                                                     " don't unload a buffer when no longer shown in a window
+set title                                                                      " show info in the window title
+set titlestring=%(%F%)%a\ -\ VIM%(\ %M%)                                       " when not empty, string to be used for the window title
+set ruler                                                                      " show cursor position below each window
+set undofile                                                                   " automatically save and restore undo history
+set undodir=~/.vim/undodir                                                     " list of directories for undo files
+set backspace=indent,eol,start                                                 " specifies what <BS>, CTRL-W, etc. can do in Insert mode
+set showmatch                                                                  " when inserting a bracket, briefly jump to its match
+set tabstop=4                                                                  " number of spaces a <Tab> in the text stands for
+set shiftwidth=4                                                               " number of spaces used for each step of (auto)indent
+set smarttab                                                                   " a <Tab> in an indent inserts 'shiftwidth' spaces
+set softtabstop=4                                                              " if non-zero, number of spaces to insert for a <Tab>
+set expandtab                                                                  " expand <Tab> to spaces in Insert mode
+set autoindent                                                                 " automatically set the indent of a new line
+set smartindent                                                                " do clever autoindenting
+set ttimeoutlen=0                                                              " the time in milliseconds that is waited for a key code or mapped key sequence to complete
+set nobackup                                                                   " don't keep a backup after overwriting a file
+set autowrite                                                                  " automatically write a file when leaving a modified buffer
+set autoread                                                                   " don't automatically read a file when it was modified outside of Vim
+set noswapfile                                                                 " use a swap file for this buffer
+set history=1000                                                               " how many command lines are remembered
+set wildmode=longest:full,full                                                 " when more than one match, list all matches and complete till longest common string
+set wildignore=.git/*,.idea/*                                                  " list of patterns to ignore files for file name completion
+set wildignorecase                                                             " ignore case when completing file names
+set wildmenu                                                                   " command-line completion shows a list of matches
+set encoding=utf-8                                                             " character encoding used in Vim
+" }}}
+
+" Plugins {{{
+" install vim-plug if it's not already
+augroup vimPlug
+  autocmd!
+	if empty(glob('~/.vim/autoload/plug.vim'))
+    silent! curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+	endif
+augroup END
+
+call plug#begin('~/.vim/plugged')
+
+" darcula theme {{{
+Plug 'doums/darcula'                                                           " a vim color scheme reproduction of the official JetBrains IDE Darcula theme
+" }}}
+
+" vim-surround {{{
+Plug 'tpope/vim-surround'                                                      " easily delete, change and add such surroundings in pairs
+" }}}
+
+" vim-repeat {{{
+Plug 'tpope/vim-repeat'                                                        " enable repeating supported plugin maps with '.'
+" }}}
+
+" snippets {{{
+Plug 'SirVer/ultisnips'                                                        " the ultimate solution for snippets in vim
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
+Plug 'honza/vim-snippets'                                                      " snippets files for various programming languages
+" }}}
+
+" supertab {{{
+Plug 'ervandew/supertab'                                                       " perform all your vim insert mode completions with Tab
+let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:SuperTabCrMapping = 0
+" }}}
+
+" nerdtree {{{
+Plug 'preservim/nerdtree'                                                      " a tree explorer plugin for vim
+" }}}
+
+" markdown {{{
+Plug 'godlygeek/tabular'                                                       " vim script for text filtering and alignment
+Plug 'plasticboy/vim-markdown'                                                 " markdown vim mode
+" }}}
+
+" goyo.vim {{{
+Plug 'junegunn/goyo.vim'                                                       " distraction-free writing in vim
+" }}}
+
+" vim-table-mode {{{
+Plug 'dhruvasagar/vim-table-mode'                                              " vim table mode for instant table creation
+" }}}
+
+call plug#end()
+" }}}
+
+" Color-Scheme {{{
+colorscheme darcula                                                            " load color scheme
+" }}}
+
+" Mappings {{{
+let mapleader = "\<Space>"
+
+" command-line hjkl-style search
+cnoremap <C-k> <Up>
+cnoremap <C-j> <Down>
+" prefer to use <C-A> to the first character of the line
+cnoremap <C-A> <Home>
+
+" prefer to use <CR> to insert line
+nnoremap <CR> o<Esc>
+
+" disable <Up>/<Down>/<Left>/<Right>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" prefer to use Y to yank characters from the cursor position to the end of the line
+nnoremap Y y$
+
+" buffers
+noremap <leader>b1 :bfirst<CR>
+noremap <leader>b9 :blast<CR>
+noremap <leader>bh :bprevious<CR>
+noremap <leader>bl :bnext<CR>
+" open the last buffer
+nnoremap <leader><leader> <C-^>
+" show all open buffers and their status
+nnoremap <leader>bb :buffers<CR>
+" open a new empty buffer
+nnoremap <leader>bn :enew<CR>
+" close the current buffer, moves to the previous one
+nnoremap <leader>bd :bdelete<CR>
+" forces buffer close
+nnoremap <leader>bD :bdelete!<CR>
+
+" move lines with Ctrl + (Shift) +J/K
+nnoremap <C-j> :m +1<CR>
+nnoremap <C-k> :m -2<CR>
+inoremap <C-j> <Esc>:m +1<CR>gi
+inoremap <C-k> <Esc>:m -2<CR>gi
+vnoremap <C-k> :m '<-2<CR>gvgv
+vnoremap <C-j> :m '>+1<CR>gvgv
+
+" toggle paste mode
+nnoremap <C-p> :set paste!<CR>
+" toggle word wrap
+nnoremap <leader>wl :set wrap! linebreak<CR>
+" toggle spell checking
+nnoremap <C-]> :set spell! spelllang=en_us<CR>
+" removes search highlighting
+nnoremap <C-l> :nohlsearch<CR><C-l>
+
+" make ascii art font
+nnoremap <leader><leader>F :.!toilet -w 200 -f standard<CR>
+nnoremap <leader><leader>f :.!toilet -w 200 -f small<CR>
+" make ascii border
+nnoremap <leader><leader>1 :.!toilet -w 200 -f term -F border<CR>
+
+" system clipboard
+vnoremap <leader>y "+y
+vnoremap <leader>d "+d
+nnoremap <leader>y "+yy
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+" file operations
+nnoremap <C-s> :w<CR>
+nnoremap <C-q> :q<CR>
+
+" execute command
+nnoremap <leader><Enter> !!zsh<CR>
+" }}}

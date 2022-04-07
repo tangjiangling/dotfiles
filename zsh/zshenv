@@ -6,6 +6,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 [ -d "$XDG_CONFIG_HOME" ] || mkdir -p "$XDG_CONFIG_HOME"
 [ -d "$XDG_CACHE_HOME" ] || mkdir -p "$XDG_CACHE_HOME"
 [ -d "$XDG_DATA_HOME" ] || mkdir -p "$XDG_DATA_HOME"
+[ -d "$HOME/.vim/undodir" ] || mkdir -p "$HOME/.vim/undodir"
 
 # common variables
 export NULLCMD=bat
