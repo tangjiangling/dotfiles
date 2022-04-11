@@ -104,6 +104,7 @@ Plug 'preservim/nerdtree'                                                      "
 " markdown {{{
 Plug 'godlygeek/tabular'                                                       " vim script for text filtering and alignment
 Plug 'plasticboy/vim-markdown'                                                 " markdown vim mode
+let g:vim_markdown_folding_disabled = 1
 " }}}
 
 " goyo.vim {{{
