@@ -177,10 +177,10 @@ nnoremap <C-]> :set spell! spelllang=en_us<CR>
 nnoremap <C-l> :nohlsearch<CR><C-l>
 
 " make ascii art font
-nnoremap <leader><leader>F :.!toilet -w 200 -f standard<CR>
-nnoremap <leader><leader>f :.!toilet -w 200 -f small<CR>
+nnoremap <leader>aF :.!toilet -w 200 -f standard<CR>
+nnoremap <leader>af :.!toilet -w 200 -f small<CR>
 " make ascii border
-nnoremap <leader><leader>1 :.!toilet -w 200 -f term -F border<CR>
+nnoremap <leader>ab :.!toilet -w 200 -f term -F border<CR>
 
 " system clipboard
 vnoremap <leader>y "+y
