@@ -143,11 +143,11 @@ noremap <Right> <NOP>
 " prefer to use Y to yank characters from the cursor position to the end of the line
 nnoremap Y y$
 
-" buffers
-noremap <leader>1 :bfirst<CR>
-noremap <leader>9 :blast<CR>
-noremap <leader>h :bprevious<CR>
-noremap <leader>l :bnext<CR>
+" argslist navigation
+noremap <leader>1 :first<CR>
+noremap <leader>9 :last<CR>
+noremap <leader>h :previous<CR>
+noremap <leader>l :next<CR>
 " open the last buffer
 nnoremap <leader><leader> <C-^>
 " show all open buffers and their status
