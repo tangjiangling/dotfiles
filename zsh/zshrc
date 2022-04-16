@@ -109,3 +109,8 @@ autoload -U colors && colors                                                  # 
 export LSCOLORS="Gxfxcxdxbxegedabagacad"                                      # enable ls colors
 setopt PROMPT_SUBST                                                           # parameter expansion, command substitution and arithmetic expansion are performed in prompts
 [ -f "$DOTFILES/zsh/prompt.zsh" ] && source "$DOTFILES/zsh/prompt.zsh"        # depend on oh-my-zsh:lib/git.zsh
+
+###############################################################################
+# Fzf                                                                         #
+###############################################################################
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
