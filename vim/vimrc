@@ -144,10 +144,10 @@ noremap <Right> <NOP>
 nnoremap Y y$
 
 " buffers
-noremap <leader>b1 :bfirst<CR>
-noremap <leader>b9 :blast<CR>
-noremap <leader>bh :bprevious<CR>
-noremap <leader>bl :bnext<CR>
+noremap <leader>1 :bfirst<CR>
+noremap <leader>9 :blast<CR>
+noremap <leader>h :bprevious<CR>
+noremap <leader>l :bnext<CR>
 " open the last buffer
 nnoremap <leader><leader> <C-^>
 " show all open buffers and their status
@@ -172,7 +172,7 @@ nnoremap <C-p> :set paste!<CR>
 " toggle word wrap
 nnoremap <leader>wl :set wrap! linebreak<CR>
 " toggle spell checking
-nnoremap <C-]> :set spell! spelllang=en_us<CR>
+nnoremap <leader>sp :set spell! spelllang=en_us<CR>
 " removes search highlighting
 nnoremap <C-l> :nohlsearch<CR><C-l>
 
