@@ -191,9 +191,11 @@ nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
-" file operations
-nnoremap <C-s> :w<CR>
-nnoremap <C-q> :q<CR>
+" save file
+nnoremap <C-s> :update<CR>
+
+" quit vim
+nnoremap <C-q> :quit<CR>
 
 " execute command
 nnoremap <leader><Enter> !!zsh<CR>
