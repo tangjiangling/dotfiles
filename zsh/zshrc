@@ -2,7 +2,7 @@
 # Auto-load customized functions                                              #
 ###############################################################################
 if [[ -d $DOTFILES/zsh/functions ]]; then
-    for func in $DOTFILES/zsh/functions/*(:t); autoload -U $func
+    for func in $DOTFILES/zsh/functions/*(:t); autoload -Uz $func
 fi
 
 ###############################################################################
