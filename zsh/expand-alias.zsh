@@ -25,11 +25,16 @@ balias() {
 }
 
 expand-alias-with-space() {
-    [[ $LBUFFER =~ "^(${(j:|:)baliases})\$" ]]; insertBlank=$?
-    if [[ ! $LBUFFER =~ "^(${(j:|:)ialiases})\$" ]]; then
+    _alias=${LBUFFER##*|}
+    _alias=${_alias##* }
+
+    [[ $_alias =~ "^(${(j:|:)baliases})\$" ]]; insertBlank=$?
+
+    if [[ ! $_alias =~ "^(${(j:|:)ialiases})\$" ]]; then
         zle _expand_alias
     fi
     zle self-insert
+
     if [[ "$insertBlank" = "0" ]]; then
         zle backward-delete-char
     fi
