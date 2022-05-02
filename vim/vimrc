@@ -136,10 +136,10 @@ cnoremap <C-A> <Home>
 nnoremap <CR> o<Esc>
 
 " disable <Up>/<Down>/<Left>/<Right>
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
