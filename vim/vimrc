@@ -133,8 +133,10 @@ cnoremap <C-j> <Down>
 " prefer to use <C-A> to the first character of the line
 cnoremap <C-A> <Home>
 
-" prefer to use <CR> to insert line
+" prefer to use (Shift) + Enter to insert line
 nnoremap <CR> o<Esc>
+nnoremap <S-Enter> O<Esc>
+inoremap <S-Enter> <C-o>O
 
 " disable <Up>/<Down>/<Left>/<Right>
 nnoremap <Up> <NOP>
