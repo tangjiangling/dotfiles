@@ -31,6 +31,8 @@ set hlsearch                                                                   "
 set termguicolors                                                              " use GUI colors for the terminal
 set cursorline                                                                 " highlight the screen line of the cursor
 set hidden                                                                     " don't unload a buffer when no longer shown in a window
+set splitbelow                                                                 " a new window is put below the current one
+set splitright                                                                 " a new window is put right of the current one
 set title                                                                      " show info in the window title
 set titlestring=%(%F%)%a\ -\ VIM%(\ %M%)                                       " when not empty, string to be used for the window title
 set ruler                                                                      " show cursor position below each window
