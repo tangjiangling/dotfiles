@@ -162,9 +162,13 @@ nnoremap Y y$
 
 " buffer navigation
 noremap <leader>1 :bfirst<CR>
+noremap [B :bfirst<CR>
 noremap <leader>9 :blast<CR>
+noremap ]B :blast<CR>
 noremap <leader>h :bprevious<CR>
+noremap [b :bprevious<CR>
 noremap <leader>l :bnext<CR>
+noremap ]b :bnext<CR>
 " open the last buffer
 nnoremap <leader><leader> <C-^>
 " show all open buffers and their status
@@ -175,6 +179,24 @@ nnoremap <leader>bn :enew<CR>
 nnoremap <leader>bd :bdelete<CR>
 " forces buffer close
 nnoremap <leader>bD :bdelete!<CR>
+
+" tab navigation
+nnoremap [t :tabprevious<CR>
+nnoremap ]t :tabnext<CR>
+nnoremap [T :tabfirst<CR>
+nnoremap ]T :tablast<CR>
+
+" quickfix list navigation
+nnoremap [q :cprevious<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
+
+" location list navigation
+nnoremap [a :lprevious<CR>
+nnoremap ]a :lnext<CR>
+nnoremap [A :lfirst<CR>
+nnoremap ]A :llast<CR>
 
 " move lines with Ctrl + (Shift) +J/K
 nnoremap <C-j> :m +1<CR>
