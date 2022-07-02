@@ -26,7 +26,7 @@ set smartcase                                                                  "
 set scrolloff=8                                                                " number of screen lines to show around the cursor
 set nowrap                                                                     " don't long lines wrap
 set list                                                                       " show <Tab> as ^I and end-of-line as $
-set listchars=tab:»·,space:·,trail:·                                           " list of strings used for list mode
+set listchars=tab:»·,trail:·,nbsp:·                                            " list of strings used for list mode
 set number                                                                     " show the line number for each line
 set relativenumber                                                             " show the relative line number for each line
 set hlsearch                                                                   " highlight all matches for the last used search pattern
