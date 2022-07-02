@@ -19,6 +19,7 @@ let &t_EI.="\e[1 q"                                                            "
 
 " Settings {{{
 set nocompatible                                                               " don't behave very Vi compatible
+set nostartofline                                                              " many jump commands move the cursor to the first non-blank character of a line
 set path=.,**                                                                  " relative to current file and everything under :pwd
 set incsearch                                                                  " show match for partly typed search command
 set ignorecase                                                                 " ignore case when using a search pattern
