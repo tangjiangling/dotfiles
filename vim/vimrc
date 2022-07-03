@@ -122,6 +122,10 @@ Plug 'junegunn/goyo.vim'                                                       "
 Plug 'dhruvasagar/vim-table-mode'                                              " vim table mode for instant table creation
 " }}}
 
+" fzf {{{
+Plug '/usr/local/opt/fzf'                                                      " fzf
+Plug 'junegunn/fzf.vim'                                                        " basic wrapper function for vim
+" }}}
 call plug#end()
 " }}}
 
