@@ -126,6 +126,12 @@ Plug 'dhruvasagar/vim-table-mode'                                              "
 Plug '/usr/local/opt/fzf'                                                      " fzf
 Plug 'junegunn/fzf.vim'                                                        " basic wrapper function for vim
 " }}}
+
+" floaterm.vim {{{
+Plug 'voldikss/vim-floaterm'                                                   " terminal manager for (neo)vim
+nnoremap <silent> <F12> :FloatermToggle<CR>
+tnoremap <silent> <F12> <C-\><C-n>:FloatermToggle<CR>
+" }}}
 call plug#end()
 " }}}
 
