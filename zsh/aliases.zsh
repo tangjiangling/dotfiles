@@ -44,6 +44,8 @@ alias mcv='mvn clean verify'
 alias mc='mvn clean'
 alias mct='mvn clean test'
 alias mgs='mvn generate-sources'
+alias mlc='mvn license:check'
+alias mlf='mvn license:format'
 alias tmci='mvn -pl '"'"'!:trino-server-rpm,!:trino-docs,!:trino-proxy,!:trino-verifier,!:trino-benchto-benchmarks'"'"' \
   -DskipTests \
   -Dmaven.javadoc.skip=true \
