@@ -40,6 +40,7 @@ set splitright                                                                 "
 set title                                                                      " show info in the window title
 set titlestring=%(%F%)%a\ -\ VIM%(\ %M%)                                       " when not empty, string to be used for the window title
 set ruler                                                                      " show cursor position below each window
+set confirm                                                                    " start a dialog when a command fails
 set undofile                                                                   " automatically save and restore undo history
 set undodir=~/.vim/undodir                                                     " list of directories for undo files
 set backspace=indent,eol,start                                                 " specifies what <BS>, CTRL-W, etc. can do in Insert mode
