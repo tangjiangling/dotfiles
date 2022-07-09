@@ -19,6 +19,7 @@ let &t_EI.="\e[1 q"                                                            "
 
 " Settings {{{
 set nocompatible                                                               " don't behave very Vi compatible
+set pastetoggle=<F2>                                                           " key sequence to toggle paste mode
 set nostartofline                                                              " many jump commands move the cursor to the first non-blank character of a line
 set path=.,**                                                                  " relative to current file and everything under :pwd
 set incsearch                                                                  " show match for partly typed search command
@@ -216,8 +217,6 @@ inoremap <C-k> <Esc>:m -2<CR>gi
 vnoremap <C-j> :m '>+1<CR>gvgv
 vnoremap <C-k> :m '<-2<CR>gvgv
 
-" toggle paste mode
-nnoremap <C-p> :set paste!<CR>
 " toggle word wrap
 nnoremap <leader>wl :set wrap! linebreak<CR>
 " toggle spell checking
