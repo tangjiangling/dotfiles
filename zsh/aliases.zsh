@@ -111,6 +111,8 @@ alias gstpo='git stash pop'
 alias gsta='git stash apply'
 alias gstd='git stash drop'
 alias gstc='git stash clear'
+alias gsh='git show'
+alias gcl='git clone'
 
 alias j8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 alias j11='export JAVA_HOME=$(/usr/libexec/java_home -v 11)'
