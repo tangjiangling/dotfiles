@@ -116,6 +116,7 @@ alias gcl='git clone'
 
 alias j8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 alias j11='export JAVA_HOME=$(/usr/libexec/java_home -v 11)'
+alias j17='export JAVA_HOME=$(/usr/libexec/java_home -v 17)'
 
 ialias jumper='ssh -i ~/.ssh/id_rsa_jumper tangjiangling@jumper.sankuai.com'
 ialias sftp='sftp tangjiangling@jumper.sankuai.com'
