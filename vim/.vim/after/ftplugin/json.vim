@@ -4,6 +4,6 @@ setlocal shiftwidth=2                                                           
 setlocal softtabstop=2                                                              " if non-zero, number of spaces to insert for a <Tab>
 
 " format json
-nnoremap <leader>f :%!jq .<CR>
+autocmd FileType json nnoremap <buffer> <leader>f :%!jq .<CR>
 " compact json
-nnoremap <leader>jc :%!jq --compact-output .<CR>
+autocmd FileType json nnoremap <buffer> <leader>jc :%!jq --compact-output .<CR>
