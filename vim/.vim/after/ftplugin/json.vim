@@ -1,7 +1,6 @@
-" Settings for json
-setlocal tabstop=2                                                                  " number of spaces a <Tab> in the text stands for
-setlocal shiftwidth=2                                                               " number of spaces used for each step of (auto)indent
-setlocal softtabstop=2                                                              " if non-zero, number of spaces to insert for a <Tab>
+setlocal tabstop=2
+setlocal shiftwidth=2
+setlocal softtabstop=2
 
 " format json
 autocmd FileType json nnoremap <buffer> <leader>f :%!jq .<CR>
