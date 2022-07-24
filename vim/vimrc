@@ -93,6 +93,10 @@ Plug 'tpope/vim-surround'                                                      "
 Plug 'tpope/vim-repeat'                                                        " enable repeating supported plugin maps with '.'
 " }}}
 
+" vim-commentray {{{
+Plug 'tpope/vim-commentary'                                                    " comment stuff out
+" }}}
+
 " snippets {{{
 Plug 'SirVer/ultisnips'                                                        " the ultimate solution for snippets in vim
 let g:UltiSnipsExpandTrigger = '<tab>'
