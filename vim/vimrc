@@ -50,6 +50,7 @@ set visualbell                                                                 "
 set undofile                                                                   " automatically save and restore undo history
 set undodir=~/.vim/undodir                                                     " list of directories for undo files
 set backspace=indent,eol,start                                                 " specifies what <BS>, CTRL-W, etc. can do in Insert mode
+set complete+=kspell                                                           " specifies how Insert mode completion works for CTRL-N and CTRL-P
 set showmatch                                                                  " when inserting a bracket, briefly jump to its match
 set tabstop=4                                                                  " number of spaces a <Tab> in the text stands for
 set shiftwidth=4                                                               " number of spaces used for each step of (auto)indent
