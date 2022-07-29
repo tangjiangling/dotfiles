@@ -61,6 +61,7 @@ set expandtab                                                                  "
 set autoindent                                                                 " automatically set the indent of a new line
 set smartindent                                                                " do clever autoindenting
 set nofoldenable                                                               " display all folds open
+set diffopt+=vertical                                                          " options for using diff mode
 set ttimeoutlen=0                                                              " the time in milliseconds that is waited for a key code or mapped key sequence to complete
 set nobackup                                                                   " don't keep a backup after overwriting a file
 set autowrite                                                                  " automatically write a file when leaving a modified buffer
