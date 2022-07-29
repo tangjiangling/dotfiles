@@ -102,6 +102,10 @@ Plug 'tpope/vim-repeat'                                                        "
 Plug 'tpope/vim-commentary'                                                    " comment stuff out
 " }}}
 
+" vim-fugitive {{{ "
+Plug 'tpope/vim-fugitive'                                                      " a git wrapper
+" }}}
+
 " snippets {{{
 Plug 'SirVer/ultisnips'                                                        " the ultimate solution for snippets in vim
 let g:UltiSnipsExpandTrigger = '<tab>'
