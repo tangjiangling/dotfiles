@@ -34,7 +34,9 @@ set listchars=tab:»·,trail:·,nbsp:·                                         
 set number                                                                     " show the line number for each line
 set relativenumber                                                             " show the relative line number for each line
 set hlsearch                                                                   " highlight all matches for the last used search pattern
-set termguicolors                                                              " use GUI colors for the terminal
+if has('termguicolors')
+  set termguicolors                                                            " use GUI colors for the terminal
+endif
 set cursorline                                                                 " highlight the screen line of the cursor
 set spelllang=en_us                                                            " list of accepted languages
 set spellfile=~/.vim/spell/en.utf-8.add                                        " file that "zg" adds good words to
