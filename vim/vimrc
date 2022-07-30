@@ -52,6 +52,9 @@ set visualbell                                                                 "
 set undofile                                                                   " automatically save and restore undo history
 set undodir=~/.vim/undodir                                                     " list of directories for undo files
 set backspace=indent,eol,start                                                 " specifies what <BS>, CTRL-W, etc. can do in Insert mode
+if has('patch-7.3.541')
+  set formatoptions+=j                                                         " list of flags that tell how automatic formatting works
+endif
 set complete+=kspell                                                           " specifies how Insert mode completion works for CTRL-N and CTRL-P
 set completeopt=menuone,preview                                                " whether to use a popup menu for Insert mode completion
 set showmatch                                                                  " when inserting a bracket, briefly jump to its match
