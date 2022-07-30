@@ -49,8 +49,12 @@ set titlestring=%(%F%)%a\ -\ VIM%(\ %M%)                                       "
 set ruler                                                                      " show cursor position below each window
 set confirm                                                                    " start a dialog when a command fails
 set visualbell                                                                 " use a visual bell instead of beeping
-set undofile                                                                   " automatically save and restore undo history
-set undodir=~/.vim/undodir                                                     " list of directories for undo files
+if has('persistent_undo')
+  set undofile                                                                 " automatically save and restore undo history
+  let &undodir = $HOME . '/.vim/undodir'
+  if !isdirectory(&undodir) | call mkdir(&undodir, 'p') | endif
+  set undodir=&undodir                                                         " list of directories for undo files
+endif
 set backspace=indent,eol,start                                                 " specifies what <BS>, CTRL-W, etc. can do in Insert mode
 if has('patch-7.3.541')
   set formatoptions+=j                                                         " list of flags that tell how automatic formatting works
