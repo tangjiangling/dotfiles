@@ -62,6 +62,7 @@ endif
 set complete+=kspell                                                           " specifies how Insert mode completion works for CTRL-N and CTRL-P
 set completeopt=menuone,preview                                                " whether to use a popup menu for Insert mode completion
 set showmatch                                                                  " when inserting a bracket, briefly jump to its match
+set nojoinspaces                                                               " use two spaces after '.' when joining a line
 set tabstop=4                                                                  " number of spaces a <Tab> in the text stands for
 set shiftwidth=4                                                               " number of spaces used for each step of (auto)indent
 set smarttab                                                                   " a <Tab> in an indent inserts 'shiftwidth' spaces
