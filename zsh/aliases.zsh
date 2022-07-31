@@ -112,6 +112,7 @@ alias gsta='git stash apply'
 alias gstd='git stash drop'
 alias gstc='git stash clear'
 alias gsts='git stash show'
+alias gstsp='git stash show --patch'
 alias gsh='git show'
 alias gcl='git clone'
 
