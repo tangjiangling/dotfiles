@@ -55,9 +55,8 @@ set confirm                                                                    "
 set visualbell                                                                 " use a visual bell instead of beeping
 if has('persistent_undo')
   set undofile                                                                 " automatically save and restore undo history
-  let &undodir = $HOME . '/.vim/undodir'
+  let &undodir = $HOME . '/.vim/undodir'                                       " list of directories for undo files
   if !isdirectory(&undodir) | call mkdir(&undodir, 'p') | endif
-  set undodir=&undodir                                                         " list of directories for undo files
 endif
 set backspace=indent,eol,start                                                 " specifies what <BS>, CTRL-W, etc. can do in Insert mode
 if has('patch-7.3.541')
