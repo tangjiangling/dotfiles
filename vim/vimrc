@@ -161,6 +161,16 @@ Plug 'voldikss/vim-floaterm'                                                   "
 nnoremap <silent> <F12> :FloatermToggle<CR>
 tnoremap <silent> <F12> <C-\><C-n>:FloatermToggle<CR>
 " }}}
+
+" textobjs {{{
+Plug 'kana/vim-textobj-user'                                                  " create your own text objects
+Plug 'kana/vim-textobj-entire'                                                " text objects for entire buffer
+Plug 'kana/vim-textobj-line'                                                  " text objects for the current line
+Plug 'beloglazov/vim-textobj-quotes'                                          " text objects for quoted characters
+Plug 'kana/vim-textobj-function'                                              " text objects for functions
+Plug 'sgur/vim-textobj-parameter'                                             " text objects for parameters
+Plug 'glts/vim-textobj-comment'                                               " text objects for comments
+" }}}
 call plug#end()
 " }}}
 
