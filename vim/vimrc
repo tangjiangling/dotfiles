@@ -117,7 +117,7 @@ Plug 'tpope/vim-repeat'                                                        "
 Plug 'tpope/vim-commentary'                                                    " comment stuff out
 " }}}
 
-" vim-fugitive {{{ "
+" vim-fugitive {{{
 Plug 'tpope/vim-fugitive'                                                      " a git wrapper
 " }}}
 
