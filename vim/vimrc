@@ -121,6 +121,10 @@ Plug 'tpope/vim-commentary'                                                    "
 Plug 'tpope/vim-fugitive'                                                      " a git wrapper
 " }}}
 
+" vim-speeddating {{{
+Plug 'tpope/vim-speeddating'                                                   " use CTRL-A/CTRL-X to increment dates, times, and more
+" }}}
+
 " snippets {{{
 Plug 'SirVer/ultisnips'                                                        " the ultimate solution for snippets in vim
 let g:UltiSnipsExpandTrigger = '<tab>'
