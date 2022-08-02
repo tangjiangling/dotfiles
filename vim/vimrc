@@ -162,6 +162,8 @@ Plug 'dhruvasagar/vim-table-mode'                                              "
 " fzf {{{
 Plug '/usr/local/opt/fzf'                                                      " fzf
 Plug 'junegunn/fzf.vim'                                                        " basic wrapper function for vim
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fb :Buffers<CR>
 " }}}
 
 " floaterm.vim {{{
