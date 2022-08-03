@@ -269,7 +269,7 @@ nnoremap <leader>wl :set wrap! linebreak<CR>
 nnoremap <leader>sp :set spell!<CR>
 nnoremap <leader>ms :mkspell! ~/.vim/spell/en.utf-8.add<CR>
 " removes search highlighting
-nnoremap <C-l> :nohlsearch<CR><C-l>
+nnoremap <C-/> :nohlsearch<CR>
 
 " make ascii art font
 nnoremap <leader>aF :.!toilet -w 200 -f standard<CR>
