@@ -275,7 +275,7 @@ endif
 nnoremap <leader>wl :set wrap! linebreak<CR>
 " toggle spell checking
 nnoremap <leader>sp :set spell!<CR>
-nnoremap <leader>ms :mkspell! ~/.vim/spell/en.utf-8.add<CR>
+nnoremap <leader>ms :mkspell! <C-r>=&spellfile<CR><CR>
 " removes search highlighting
 nnoremap <C-/> :nohlsearch<CR>
 
