@@ -272,7 +272,7 @@ if has('mac') && !exists('+macmeta')
 endif
 
 " toggle word wrap
-nnoremap <leader>wl :set wrap! linebreak<CR>
+nnoremap <leader>wl :set wrap! linebreak!<CR>
 " toggle spell checking
 nnoremap <leader>sp :set spell!<CR>
 nnoremap <leader>ms :mkspell! <C-r>=&spellfile<CR><CR>
