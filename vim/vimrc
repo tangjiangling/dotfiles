@@ -276,7 +276,7 @@ nnoremap <leader>wl :set wrap! linebreak<CR>
 " toggle spell checking
 nnoremap <leader>sp :set spell!<CR>
 nnoremap <leader>ms :mkspell! <C-r>=&spellfile<CR><CR>
-" removes search highlighting
+" remove search highlighting
 nnoremap <C-/> :nohlsearch<CR>
 
 " make ascii art font
