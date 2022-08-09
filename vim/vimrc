@@ -3,7 +3,9 @@ let mapleader = "\<Space>"
 language en_US.UTF-8                                                           " set the current language
 filetype plugin indent on                                                      " add filetype, plugin, and indent support
 syntax on                                                                      " turn on syntax highlighting
-runtime! macros/matchit.vim                                                    " `matchit.vim` is built-in so let's enable it! (hit `%` on `if` to jump to `else`)
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim                                                  " `matchit.vim` is built-in so let's enable it! (hit `%` on `if` to jump to `else`)
+endif
 
 " Cursor settings
 " 0, 1 or none    blinking block cursor
