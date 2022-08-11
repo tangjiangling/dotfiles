@@ -279,7 +279,7 @@ nnoremap <leader>wl :set wrap! linebreak!<CR>
 nnoremap <leader>sp :set spell!<CR>
 nnoremap <leader>ms :mkspell! <C-r>=&spellfile<CR><CR>
 " remove search highlighting
-nnoremap <C-/> :nohlsearch<CR>
+nnoremap <C-/> :nohlsearch<CR><C-l>
 
 " make ascii art font
 nnoremap <leader>aF :.!toilet -w 200 -f standard<CR>
