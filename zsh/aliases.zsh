@@ -127,6 +127,8 @@ alias gcl='git clone --recurse-submodules'
 alias gr='git remote'
 alias grv='git remote -v'
 alias gra='git remote add'
+alias grmv='git remote rename'
+alias grrm='git remote remove'
 
 alias j8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 alias j11='export JAVA_HOME=$(/usr/libexec/java_home -v 11)'
