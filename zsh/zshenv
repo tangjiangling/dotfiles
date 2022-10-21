@@ -26,3 +26,7 @@ export ZINIT_HOME="$XDG_DATA_HOME/zinit/zinit.git"
 
 # java home
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
+# go path
+export GOPATH="$XDG_DATA_HOME"/go
+[ -d "$XDG_DATA_HOME/go" ] || mkdir -p "$XDG_DATA_HOME"/go
