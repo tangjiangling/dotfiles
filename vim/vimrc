@@ -258,10 +258,10 @@ nnoremap [Q :cfirst<CR>
 nnoremap ]Q :clast<CR>
 
 " location list navigation
-nnoremap [a :lprevious<CR>
-nnoremap ]a :lnext<CR>
-nnoremap [A :lfirst<CR>
-nnoremap ]A :llast<CR>
+nnoremap [l :lprevious<CR>
+nnoremap ]l :lnext<CR>
+nnoremap [L :lfirst<CR>
+nnoremap ]L :llast<CR>
 
 " move lines with Alt + J/K
 if has('mac') && !exists('+macmeta')
