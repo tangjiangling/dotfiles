@@ -95,16 +95,23 @@ endif
 set encoding=utf-8                                                             " character encoding used in Vim
 " }}}
 
+" utils {{{
+" default augroup for vimrc
+augroup vimrc
+    autocmd!
+augroup END
+
+" prefer to add all autocmds to the default augroup
+command! -nargs=+ Autocmd autocmd vimrc <args>
+" }}}
+
 " Plugins {{{
 " install vim-plug if it's not already
-augroup vimPlug
-  autocmd!
-  if empty(glob('~/.vim/autoload/plug.vim'))
-    silent! curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-  endif
-augroup END
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent! curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  Autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 call plug#begin('~/.vim/plugged')
 
@@ -310,7 +317,7 @@ nnoremap <leader><Enter> !!zsh<CR>
 
 " autocmds {{{
 " automatically disable paste mode when leaving insert mode
-autocmd InsertLeave * set nopaste
+Autocmd InsertLeave * set nopaste
 " }}}
 
 " abbreviations {{{
