@@ -310,3 +310,7 @@ nnoremap <leader><Enter> !!zsh<CR>
 " automatically disable paste mode when leaving insert mode
 autocmd InsertLeave * set nopaste
 " }}}
+
+" abbreviations {{{
+cabbrev vf vertical find
+" }}}
