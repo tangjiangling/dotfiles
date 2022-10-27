@@ -177,6 +177,7 @@ Plug '/usr/local/opt/fzf'                                                      "
 Plug 'junegunn/fzf.vim'                                                        " basic wrapper function for vim
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>fs :Rg<CR>
 " }}}
 
 " floaterm.vim {{{
