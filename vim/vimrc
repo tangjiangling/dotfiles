@@ -319,6 +319,9 @@ nnoremap <leader><Enter> !!zsh<CR>
 " autocmds {{{
 " automatically disable paste mode when leaving insert mode
 Autocmd InsertLeave * set nopaste
+
+" automatically source vimrc on save
+Autocmd BufWritePost vimrc source $MYVIMRC
 " }}}
 
 " abbreviations {{{
