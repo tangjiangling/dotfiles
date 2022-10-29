@@ -321,7 +321,7 @@ nnoremap <leader><Enter> !!zsh<CR>
 Autocmd InsertLeave * set nopaste
 
 " automatically source vimrc on save
-Autocmd BufWritePost vimrc source $MYVIMRC
+Autocmd BufWritePost vimrc source %
 " }}}
 
 " abbreviations {{{
