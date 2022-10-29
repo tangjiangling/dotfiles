@@ -322,5 +322,5 @@ Autocmd InsertLeave * set nopaste
 " }}}
 
 " abbreviations {{{
-cabbrev vf vertical find
+cabbrev vsf vertical sfind
 " }}}
