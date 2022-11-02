@@ -231,6 +231,12 @@ vnoremap <Right> <NOP>
 " prefer to use Y to yank characters from the cursor position to the end of the line
 nnoremap Y y$
 
+" arglist navigation
+nnoremap [a :previous<CR>
+nnoremap ]a :next<CR>
+nnoremap [A :first<CR>
+nnoremap ]A :last<CR>
+
 " buffer navigation
 noremap <leader>1 :bfirst<CR>
 noremap [B :bfirst<CR>
