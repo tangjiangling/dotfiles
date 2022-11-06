@@ -29,10 +29,16 @@ alias tns='tmux new-session -s'
 alias tnsd='tmux new-session -s tjl_workspace'
 alias tasd='tmux attach-session -t tjl_workspace'
 alias tas='tmux attach-session -t'
-alias tasf='tmux list-session | awk -F'"'"':'"'"' '"'"'{print $1}'"'"' | fzf --print0 --select-1 --exit-0 | xargs -0 -o -t tmux attach-session -t'
+alias tasf='tmux list-session \
+  | awk -F'"'"':'"'"' '"'"'{print $1}'"'"' \
+  | fzf --print0 --select-1 --exit-0 \
+  | xargs -0 -o -t tmux attach-session -t'
 alias tls='tmux list-session'
 alias tks='tmux kill-session -t'
-alias tksf='tmux list-session | awk -F'"'"':'"'"' '"'"'{print $1}'"'"' | fzf --print0 --select-1 --exit-0 | xargs -0 -o -t tmux kill-session -t'
+alias tksf='tmux list-session \
+  | awk -F'"'"':'"'"' '"'"'{print $1}'"'"' \
+  | fzf --print0 --select-1 --exit-0 \
+  | xargs -0 -o -t tmux kill-session -t'
 alias tksa='tmux kill-session -a'
 
 alias mvv='mvn -v'
