@@ -76,8 +76,12 @@ alias pmci='mvn -pl '"'"'!:presto-server-rpm,!:presto-docs,!:presto-proxy,!:pres
   clean install'
 
 alias gst='git status'
-alias ga='git add'
-alias gapa='git add --patch'
+alias ga='git ls-files --modified --others --exclude-standard \
+  | fzf --multi --print0 --select-1 --exit-0 --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all \
+  | xargs -0 -o -t git add'
+alias gapa='git ls-files --modified --others --exclude-standard \
+  | fzf --multi --print0 --select-1 --exit-0 --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle-all \
+  | xargs -0 -o -t git add --patch'
 alias gaa='git add --all'
 alias gc='git commit'
 alias gcm='git commit -m'
