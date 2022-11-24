@@ -337,4 +337,6 @@ cabbrev wd windo
 cabbrev wdd windo diffthis
 cabbrev wddu windo diffupdate
 cabbrev wddo windo diffoff
+cabbrev bdo bufdo
+cabbrev bdo! bufdo!
 " }}}
