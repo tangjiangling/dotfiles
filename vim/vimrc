@@ -332,4 +332,9 @@ Autocmd BufWritePost .vimrc,vimrc source %
 
 " abbreviations {{{
 cabbrev vsf vertical sfind
+
+cabbrev wd windo
+cabbrev wdd windo diffthis
+cabbrev wddu windo diffupdate
+cabbrev wddo windo diffoff
 " }}}
