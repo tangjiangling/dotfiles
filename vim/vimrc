@@ -88,6 +88,9 @@ set wildmode=longest:full,full                                                 "
 set wildignore=.git/*,.idea/*                                                  " list of patterns to ignore files for file name completion
 set wildignorecase                                                             " ignore case when completing file names
 set wildmenu                                                                   " command-line completion shows a list of matches
+if has('patch-8.2.4325')
+  set wildoptions=pum,tagfile                                                  " A list of words that change how cmdline-completion is done
+endif
 set grepformat=%f:%l:%c:%m,%f:%l:%m,%f:%l%m,%f\ \ %l%m                         " list of formats for output of 'grepprg'
 if executable('rg')
   set grepprg=rg\ --no-heading\ --vimgrep                                      " program used for the ":grep" command
